@@ -3,13 +3,58 @@
 <head>  
   <!--<meta name=viewport content="width=device-width, initial-scale=1">	
    my css -->
-  <style></style>
+  <style>
+	section {
+      width: 100%;
+      margin: auto;
+    }
+    div#left_cat {
+      width: 50%;
+      float: left;
+	}
+	div#right_cat {
+      margin-left: 50%;
+    }
+	img {
+	  max-height: 300px;
+	}
+	.image{
+	  position: relative;
+	  width: 100%;
+	}
+	.floating_header { 
+      position: absolute; 
+      top: 10px; 
+	  left: 10px;
+      width: 100%; 
+    }
+	.floating_header span{ 
+	  color: white;
+	  background: rgba(0, 0, 0, 0.7);
+      padding: 10px; 
+	}
+  </style>
   <script type="text/javascript" src="js/libs/jquery.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-  <img src="img/cat.jpg" id="cat_image"></img>
-  <h3>Number of clicks</h3>
-  <p id="number_of_clicks">0</p>
+  <section>
+    <div id="left_cat" class="image">
+	  <h1 class="floating_header" id="floating_header1">
+	    <span></span>
+	  </h1>
+      <img src="img/cat.jpg" id="cat_image" ></img>
+      <h3>Number of clicks</h3>
+      <p id="number_of_clicks">0</p>
+    </div>
+    <div id="right_cat" class="image">
+	  <h1 class="floating_header" id="floating_header2">
+		<span></span>
+	  </h1>
+      <img src="img/cat2.jpg" id="cat_image2" ></img>
+      <h3>Number of clicks</h3>
+      <p id="number_of_clicks2">0</p>
+    </div>
+  </section>
 </body>
 </html>
